@@ -1,0 +1,8 @@
+u8g2.clearDisplay();
+u8g2.setDrawColor(1);
+u8g2.drawFrame(10,10,80,40);
+u8g2.setFont(u8g2_font_6x13_mr);
+u8g2.drawStr(34,28,"Hello");
+u8g2.drawStr(34,42,"World!");
+u8g2.sendBuffer();
+
