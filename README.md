@@ -80,5 +80,16 @@ Here are a few step-by-step instructions for getting started with the program:
   <img src="https://github.com/user-attachments/assets/6015cd08-6942-4f4b-88a4-8c213162f27b">
 </p>
 
+- Now, suppose that you want to change the position of the frame and the texts, e.g. move them 10 pixels to the right. You just need to click inside the Command Editor box and edit the X coordinates of the 3 objects:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2b30ed0c-0976-4759-9138-aed10a7a1abf">
+</p>
+
+- Then press "Send File" again and the display will show the new layout:
+
+- If the result is ok for you, you can save the script by clicking on "Save File". Or you can simply copy and paste the script commands to the source code of your project.
+
+- In this example we started from an existing script, but you can start from scratch and add new commands. While it is possible to directly type the commands in the Command Editor box, you can let the application insert a command template for you by selecting one of the available commands from the Function dropdown list and clicking on Insert (first make sure to click inside the Command Editor box where you want the new text to be placed). The application will write the template, e.g. `drawHLine(x,y,w)`, and will also show the function prototype in the Function Prototype textbox. Then you will have to edit the script and enter the actual function arguments.
 
 
