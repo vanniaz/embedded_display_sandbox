@@ -41,11 +41,9 @@ void setup() {
 	// Draws initial screen, to check that the display is working
 
 	u8g2.setDrawColor(1);
-	u8g2.setFont(u8g2_font_6x13_tr);
+	u8g2.setFont(u8g2_font_6x13_mr);
 	u8g2.drawStr(0,16,"Display SandBox");
-	u8g2.setFont(u8g2_font_profont22_mr);
-	u8g2.setFont(u8g2_font_6x13_tr);
-	u8g2.drawStr(0,24,"Waiting for commands");
+	u8g2.drawStr(0,40,"Waiting for commands");
 	u8g2.sendBuffer();
 }
 
