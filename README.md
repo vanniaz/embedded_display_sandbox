@@ -139,4 +139,6 @@ Here are a few step-by-step instructions for getting started with the program:
 </p>
 
 
+> [!WARNING]
+> This is no more than an Alpha Release, that supports only a minimal set of U8g2 commands, and probably still contains bugs. However, even with these limitations, it has already proved useful for real projects, so you are encouraged to try it, report bugs and suggest which U8g2 commands should be added first. Your feedback will be appreciated.
 
