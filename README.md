@@ -104,13 +104,13 @@ Here are a few step-by-step instructions for getting started with the program:
 - The function prototype is shown for reference in the Function text box. Now you can click "Insert", the function template will be inserted in the editor box:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/12cef996-9c77-4582-b643-0debbf553426">
+  <img src="https://github.com/user-attachments/assets/27a52643-cefd-42ee-95b8-90fc60296ce5">
 </p>
 
 - Change the x, y, w, h in the template with the actual coordinates for the second frame:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e43d0129-c259-4649-ba05-4a27570a6b01">
+  <img src="https://github.com/user-attachments/assets/fd5c657d-0fbf-4136-bd2b-fc86b93276d2">
 </p>
 
 -  Click "Send File" again to see the result:
@@ -129,7 +129,7 @@ Here are a few step-by-step instructions for getting started with the program:
 - By clicking "Insert" the setFont command is inserted into the editor box, with che chosen font as argument, so in this case no manual editing is necessary:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/995df586-a4e0-4b30-9e72-33938ccc33fd">
+  <img src="https://github.com/user-attachments/assets/d24f0917-8cc2-40b4-8a77-049ac4c789a4">
 </p>
 
 - After clicking "Send File" we see that the text "World!" now is larger:
