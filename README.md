@@ -107,7 +107,7 @@ Here are a few step-by-step instructions for getting started with the program:
   <img src="https://github.com/user-attachments/assets/27a52643-cefd-42ee-95b8-90fc60296ce5">
 </p>
 
-- Change the x, y, w, h in the template with the actual coordinates for the second frame:
+- Change the x, y, w, h with the actual coordinates for the second frame:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fd5c657d-0fbf-4136-bd2b-fc86b93276d2">
@@ -143,7 +143,7 @@ Here are a few step-by-step instructions for getting started with the program:
 > This is no more than an Alpha Release, that supports only a minimal set of U8g2 commands, and probably still contains bugs. However, even with these limitations, it has already proved useful for real projects, so you are encouraged to try it, report bugs and suggest which U8g2 commands should be added first. Your feedback will be appreciated.
 
 > [!TIP]
-> If you are wiiling to contribute by implementing new commands, you can find a few indications [here](/contributing.md)
+> If you are willing to contribute by implementing new commands, you can find a few indications [here](/contributing.md)
 >
 
 
