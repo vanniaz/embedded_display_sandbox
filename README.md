@@ -25,17 +25,17 @@ The communication between the PC and the embedded interpreter uses a simple prot
 
 #### Preparing the sandbox firmware
 
-Before using the sandbox make sure that your hardware (MCU + display) is working correctly. Please follow the U8g2 setup guide:
+The sandbox source files are in the in the [Arduino project ](/Arduino) folder.
 
-https://github.com/olikraus/u8g2/wiki/setup_tutorial
+Before using the sandbox make sure that your hardware (MCU + display) is working correctly. Please follow the U8g2 setup guide: https://github.com/olikraus/u8g2/wiki/setup_tutorial
 
-Check that the display initialisation is ok, and that you can write a sample text on it. Then, edit `main.cpp` in the [Arduino project ](/Arduino) folder and put there the same initialisation line, replacing the following:
+You will need to change the initialisation line in `main.cpp` in the sandbox source:
 
 ```U8G2_SH1107_64X128_F_HW_I2C u8g2(U8G2_R1, 15, 5, 18);```
 
-Now you have to decide which fonts you will be using in your project. U8g2 provides many fonts, you can see a preview here:
+to adapt it to your specific hardware configuration, as explained in the U8g2 tutorial.
 
-https://github.com/olikraus/u8g2/wiki/fntlistall
+Now you have to decide which fonts you will be using in your project. U8g2 provides many fonts, you can see a preview here: https://github.com/olikraus/u8g2/wiki/fntlistall
 
 To enable the chosen fonts you have to uncomment their definition in `fontlist.h` (also in the [Arduino project ](/Arduino) folder).
 If you are undecided about some fonts, you can include more fonts and switch them from the Windows app to check how they look, but keep in mind that **the number of fonts is limited by the flash capacity of your MCU**, so check your code size after the compilation to see if you are approaching the limit.
@@ -53,7 +53,7 @@ At this point you can compile the Arduino project and upload it to the MCU, if e
 
 #### Using the Windows application
 
-A complete .NET solution, written in C#, is available in the [Windows](/Windows) folder. However, a precompiled exe file, along with all required configuration files, can be found in the [Debug](/Windows/DsplCmdSequencer/bin/Debug) folder. In most cases it should be possible to run the application by simply copying this folder on your Windows PC and launching the exe file directly.
+A Windows .NET solution, written in C#, is available in the [Windows](/Windows) folder. However, a precompiled exe file, along with all required configuration files, can be found in the [Debug](/Windows/DsplCmdSequencer/bin/Debug) folder. In most cases it should be possible to run the application by simply copying this folder on your Windows PC and launching the exe file directly.
 
 Here are a few step-by-step instructions for getting started with the program:
 - Click on the "Settings" button, and select the COM port to which the MCU is connected (you can also change the baudrate if necessary)
@@ -86,10 +86,57 @@ Here are a few step-by-step instructions for getting started with the program:
   <img src="https://github.com/user-attachments/assets/2b30ed0c-0976-4759-9138-aed10a7a1abf">
 </p>
 
-- Then press "Send File" again and the display will show the new layout:
+- Then press "Send File" again, you can see that the frame and the texts have been moved to the right:
+
+<p align="center">
+  <img width=40% height=40% src="https://github.com/user-attachments/assets/2e8cf7c8-1396-46bb-885e-80e9d936817c">
+</p>
 
 - If the result is ok for you, you can save the script by clicking on "Save File". Or you can simply copy and paste the script commands to the source code of your project.
 
-- In this example we started from an existing script, but you can start from scratch and add new commands. While it is possible to directly type the commands in the Command Editor box, you can let the application insert a command template for you by selecting one of the available commands from the Function dropdown list and clicking on Insert (first make sure to click inside the Command Editor box where you want the new text to be placed). The application will write the template, e.g. `drawHLine(x,y,w)`, and will also show the function prototype in the Function Prototype textbox. Then you will have to edit the script and enter the actual function arguments.
+- In this example we started from an existing script, but you can start from scratch and add new commands. While it is possible to directly type the commands in the Command Editor box, you can let the application insert a command template for you by selecting one of the available commands from the Function dropdown list and clicking on Insert (first make sure to click inside the Command Editor box where you want the new text to be placed).
+- Let's suppose that you want to add a second frame around the first one. Start by clicking in the Command Editor at the beginning of the line below the first drawFrame command, to put the insertion point there. Then, select "drawFrame" from the Function dropdown:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fd5414f8-055e-447d-ae5a-10b777397ac6">
+</p>
+
+- The function prototype is shown for reference in the Function text box. Now you can click "Insert", the function template will be inserted in the editor box:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/12cef996-9c77-4582-b643-0debbf553426">
+</p>
+
+- Change the x, y, w, h in the template with the actual coordinates for the second frame:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e43d0129-c259-4649-ba05-4a27570a6b01">
+</p>
+
+-  Click "Send File" again to see the result:
+
+<p align="center">
+  <img width=40% height=40% src="https://github.com/user-attachments/assets/496037b9-ab29-4dbe-b5e1-3a14c6a7e267">
+</p>
+
+
+- As a last step, you may want to change the font for the "World!" text. So you choose "setFont" from the Function list, and choose a font from the Font list:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8025c698-7e8a-4b7a-b1ea-a344dfec1c0c">
+</p>
+
+- By clicking "Insert" the setFont command is inserted into the editor box, with che chosen font as argument, so in this case no manual editing is necessary:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/995df586-a4e0-4b30-9e72-33938ccc33fd">
+</p>
+
+- After clicking "Send File" we see that the text "World!" now is larger:
+
+<p align="center">
+  <img width=40% height=40% src="https://github.com/user-attachments/assets/50697cb9-6837-4ab2-89ad-bdb87da92230">
+</p>
+
 
 
